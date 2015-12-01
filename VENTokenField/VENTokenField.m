@@ -125,7 +125,8 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
     self.inputTextField.placeholder = _placeholderText;
 }
 
--(void)setInputTextFieldAccessibilityLabel:(NSString *)inputTextFieldAccessibilityLabel {
+- (void)setInputTextFieldAccessibilityLabel:(NSString *)inputTextFieldAccessibilityLabel
+{
     _inputTextFieldAccessibilityLabel = inputTextFieldAccessibilityLabel;
     self.inputTextField.accessibilityLabel = _inputTextFieldAccessibilityLabel;
 }
@@ -134,6 +135,12 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
 {
     _inputTextFieldTextColor = inputTextFieldTextColor;
     self.inputTextField.textColor = _inputTextFieldTextColor;
+}
+
+- (void)setInputTextFieldFont:(UIFont *)inputTextFieldFont
+{
+    _inputTextFieldFont = inputTextFieldFont;
+    self.inputTextField.font = _inputTextFieldFont;
 }
 
 - (void)setToLabelTextColor:(UIColor *)toLabelTextColor
