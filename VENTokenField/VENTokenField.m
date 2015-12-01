@@ -352,9 +352,6 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
     }
 
     [self.inputTextField becomeFirstResponder];
-    if ([self.delegate respondsToSelector:@selector(tokenFieldDidBeginEditing:)]) {
-        [self.delegate tokenFieldDidBeginEditing:self];
-    }
 }
 
 - (UILabel *)toLabel
@@ -553,6 +550,10 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
 {
     if (textField == self.inputTextField) {
         [self unhighlightAllTokens];
+        
+        if ([self.delegate respondsToSelector:@selector(tokenFieldDidBeginEditing:)]) {
+            [self.delegate tokenFieldDidBeginEditing:self];
+        }
     }
 }
 
