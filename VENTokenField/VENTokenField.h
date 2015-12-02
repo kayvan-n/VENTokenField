@@ -61,6 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) CGFloat verticalInset;
 @property (assign, nonatomic) CGFloat horizontalInset;
 @property (assign, nonatomic) CGFloat tokenPadding;
+@property (assign, nonatomic) CGFloat toLabelPadding;
 @property (assign, nonatomic) CGFloat minInputWidth;
 
 @property (assign, nonatomic) UIKeyboardType inputTextFieldKeyboardType;
